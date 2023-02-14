@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:jobfinderui/screens/signup/address_screen.dart';
-import 'package:jobfinderui/screens/signup/signup_screen.dart';
 import 'package:jobfinderui/utils/lists.dart';
 import 'package:jobfinderui/widgets/buttons.dart';
 import 'package:jobfinderui/widgets/textfields.dart';

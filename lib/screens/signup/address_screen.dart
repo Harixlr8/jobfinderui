@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:jobfinderui/screens/home/home.dart';
 import 'package:jobfinderui/utils/colors.dart';
-import 'package:jobfinderui/utils/fontsandstrings.dart';
-import 'package:jobfinderui/widgets/buttons.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class AddressScreen extends StatelessWidget {
@@ -37,7 +33,7 @@ class AddressScreen extends StatelessWidget {
                   topRight: Radius.circular(25),
                 ),
               ),
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               height: 350,
               width: double.infinity,
               child: Column(
@@ -102,7 +98,7 @@ class AddressScreen extends StatelessWidget {
                       .box
                       .white
                       .roundedSM
-                      .padding(EdgeInsets.all(15))
+                      .padding(const EdgeInsets.all(15))
                       .width(double.infinity)
                       .make(),
                   15.heightBox,
@@ -144,7 +140,7 @@ class AddressScreen extends StatelessWidget {
                   25.heightBox,
                   TextButton(
                     onPressed: () {
-                      Get.to(()=>Home());
+                      Get.to(()=>const Home());
                     },
                     child: const Text(
                       'CONFIRM',

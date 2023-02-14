@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import '../../utils/colors.dart';
@@ -40,21 +38,35 @@ class WalletScreen extends StatelessWidget {
               ],
             ),
           ),
-          175.heightBox,
-          "Hey! \n We are Cooking it up..."
-              .text
-              .size(32)
-              .align(TextAlign.center)
-              .bold
-              .make(),
-          10.heightBox,
-          "Stay Tuned!"
-              .text
-              .size(28)
-              .align(TextAlign.center)
-              .color(buttonColor)
-              .semiBold
-              .make(),
+          80.heightBox,
+          Stack(
+            children: [
+              Image.asset('assets/images/loading - Copy.png'),
+              Positioned(
+                top: 150,
+                left: 72,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    "Hey! \n We are Cooking it up..."
+                        .text
+                        .size(25)
+                        .align(TextAlign.center)
+                        .bold
+                        .make(),
+                    10.heightBox,
+                    "Stay Tuned!"
+                        .text
+                        .size(24)
+                        .align(TextAlign.center)
+                        .color(buttonColor)
+                        .semiBold
+                        .make(),
+                  ],
+                ),
+              ),
+            ],
+          )
         ],
       ),
     );

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:jobfinderui/utils/colors.dart';
 
@@ -24,8 +22,8 @@ class Home extends StatelessWidget {
 
     var navBarItem = [
       const BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-      const BottomNavigationBarItem(
-          icon: Icon(Icons.work_outlined), label: 'Works'),
+       BottomNavigationBarItem(
+          icon: Image.asset('assets/images/portfolio - Copy.png',color: whiteColor,width: 20,), label: 'Works'),
       const BottomNavigationBarItem(
           icon: Icon(Icons.account_balance_wallet), label: 'Wallet'),
     ];
@@ -43,8 +41,8 @@ class Home extends StatelessWidget {
       bottomNavigationBar: Obx(
         () => ClipRRect(
           borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(20.0),
-            topRight: Radius.circular(20.0),
+            topLeft: Radius.circular(15.0),
+            topRight: Radius.circular(15.0),
           ),
           child: BottomNavigationBar(
             onTap: (value) => controller.currentNavIndex.value = value,

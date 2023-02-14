@@ -6,3 +6,8 @@ const imageList = [
   'https://www.cubicles.com//uploads/light-box/42/LargeImage/office-furniture-workstations-2.jpg',
   'https://www.shutterstock.com/image-vector/photo-camrea-icon-260nw-1080280034.jpg',
 ];
+const lightImageList = [
+  'https://m.media-amazon.com/images/I/41s9XOscUlL._SX342_.jpg',
+  'https://www.homelane.com/blog/wp-content/uploads/2020/11/shutterstock_1426146896-scaled.jpg',
+  'https://cdn.thisiswhyimbroke.com/images/edison-bulb-lamp.jpg',
+];

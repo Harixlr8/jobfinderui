@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:jobfinderui/utils/colors.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -26,7 +25,7 @@ Widget progressType({taskNumber, taskStatus}) {
       ],
     ),
     circularStrokeCap: CircularStrokeCap.butt,
-    backgroundColor: Color.fromARGB(255, 244, 182, 89),
+    backgroundColor: Color.fromARGB(255, 210, 138, 30),
     progressColor: const Color.fromARGB(255, 203, 199, 199),
   ).box.white.roundedFull.make();
 }

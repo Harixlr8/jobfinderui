@@ -12,17 +12,15 @@ class WorkScreen extends StatefulWidget {
 }
 
 class _WorkScreenState extends State<WorkScreen> {
-  @override
-  late bool _formvisible;
   int? _formindex;
 
   @override
   void initState() {
     super.initState();
-    _formvisible = false;
     _formindex = 1;
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       // backgroundColor: Colors.greenAccent,
@@ -66,7 +64,6 @@ class _WorkScreenState extends State<WorkScreen> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        _formvisible = true;
                         _formindex = 1;
                       });
                     },
@@ -96,7 +93,6 @@ class _WorkScreenState extends State<WorkScreen> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        _formvisible = true;
                         _formindex = 2;
                       });
                     },
@@ -121,7 +117,6 @@ class _WorkScreenState extends State<WorkScreen> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        _formvisible = true;
                         _formindex = 3;
                       });
                     },
@@ -155,7 +150,7 @@ class _WorkScreenState extends State<WorkScreen> {
                 top: 160,
                 left: 17,
                 child: Container(
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   child: Column(
                     children: [
                       workType1(
@@ -181,7 +176,7 @@ class _WorkScreenState extends State<WorkScreen> {
                 top: 160,
                 left: 17,
                 child: Container(
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   child: Column(
                     children: [
                       workType2(
@@ -202,7 +197,7 @@ class _WorkScreenState extends State<WorkScreen> {
                 top: 160,
                 left: 17,
                 child: Container(
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   child: Column(
                     children: [
                       workType2(

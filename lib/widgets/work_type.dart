@@ -1,12 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import '../utils/colors.dart';
 
-Widget workType({workName, location, name,onpress}) {
+Widget workType({workName, location, name, onpress}) {
   return InkWell(
-    onTap: onpress,
+    onTap: () {},
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -37,7 +36,7 @@ Widget workType({workName, location, name,onpress}) {
             )
           ],
         ),
-        10.heightBox,
+        5.heightBox,
         '$workName'.text.semiBold.size(21).make(),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -56,7 +55,7 @@ Widget workType({workName, location, name,onpress}) {
                     '$location'.text.make(),
                   ],
                 ),
-                10.heightBox,
+                5.heightBox,
                 Row(
                   children: [
                     const Icon(
@@ -74,23 +73,41 @@ Widget workType({workName, location, name,onpress}) {
               children: [
                 "Price per day".text.size(10).align(TextAlign.right).make(),
                 "800".text.size(20).semiBold.align(TextAlign.right).make(),
-                5.heightBox,
-                Container(
-                  width: 125,
-                  padding: const EdgeInsets.all(5),
-                  decoration: const BoxDecoration(
-                    color: buttonColor,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(10),
+                // 5.heightBox,
+                // Container(
+                //   width: 125,
+                //   padding: const EdgeInsets.all(5),
+                //   decoration: const BoxDecoration(
+                //     color: buttonColor,
+                //     borderRadius: BorderRadius.all(
+                //       Radius.circular(10),
+                //     ),
+                //   ),
+                //   child: 'View Details'
+                //       .text
+                //       .size(13)
+                //       .align(TextAlign.center)
+                //       .black
+                //       .make(),
+                // ),
+                TextButton(
+                  style: ButtonStyle(
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0),
+                      ),
                     ),
+                    backgroundColor:
+                        MaterialStateProperty.all(Colors.amber.shade700),
                   ),
+                  onPressed: onpress,
                   child: 'View Details'
                       .text
                       .size(13)
                       .align(TextAlign.center)
                       .black
                       .make(),
-                ),
+                ).box.width(120).height(35).make()
               ],
             )
           ],
@@ -105,7 +122,6 @@ Widget workType({workName, location, name,onpress}) {
   );
 }
 
-
 Widget workType2({workName, location, name}) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
@@ -113,7 +129,9 @@ Widget workType2({workName, location, name}) {
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          SizedBox(width: 250,),
+          const SizedBox(
+            width: 250,
+          ),
           // Container(
           //   width: 50,
           //   padding: const EdgeInsets.all(1),
@@ -224,7 +242,9 @@ Widget workType1({workName, location, name}) {
             ),
             child: 'New'.text.size(10).align(TextAlign.center).white.make(),
           ),
-          SizedBox(width: 200,),
+          const SizedBox(
+            width: 200,
+          ),
 
           Row(
             children: [

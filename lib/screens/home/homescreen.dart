@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:jobfinderui/screens/jobdetails.dart/job_details.dart';
+// import 'package:get/get.dart';
 import 'package:jobfinderui/widgets/progress_widget.dart';
 import 'package:jobfinderui/widgets/work_type.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import '../../utils/colors.dart';
+import '../jobdetails.dart/job_details.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -68,17 +68,17 @@ class HomeScreen extends StatelessWidget {
                                     .size(20)
                                     .make(),
                                 5.widthBox,
-                                const Icon(
-                                  Icons.check_circle,
-                                  color: Colors.yellow,
+                                 Icon(
+                                  Icons.arrow_drop_down_circle,
+                                  color: Colors.amber.shade700,
                                 )
                               ],
                             ),
                             Row(
                               children: [
-                                const Icon(
+                                 Icon(
                                   Icons.location_on,
-                                  color: Colors.yellow,
+                                  color: Colors.amber.shade700,
                                 ),
                                 5.widthBox,
                                 'Trivandrum, Palayam'
@@ -199,9 +199,14 @@ class HomeScreen extends StatelessWidget {
                   'Job List (10)'.text.size(18).make(),
                   10.heightBox,
                   workType(
-                    // onpress: Get.to(
-                    //   () => JobDetails(),
-                    // ),
+                    onpress: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const JobDetails(),
+                        ),
+                      );
+                    },
                     workName: 'Ceiling Light Repairing',
                     location: 'Palayam',
                     name: 'Dipeesh',
@@ -211,19 +216,19 @@ class HomeScreen extends StatelessWidget {
                     workName: 'Switch Changing',
                     location: 'Kumarapuram',
                     name: 'Sudeep',
-                    // onpress: () {},
+                    onpress: () {},
                   ),
                   5.heightBox,
                   workType(
                     workName: 'Switch Changing',
                     location: 'Palayam',
                     name: 'Sudeep',
-                    //  onpress: () {},
+                    onpress: () {},
                   ),
                   50.heightBox,
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),

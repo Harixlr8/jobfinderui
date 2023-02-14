@@ -9,7 +9,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           appBarTheme: const AppBarTheme(
             titleSpacing: 0.00,
-              elevation: 0, backgroundColor: Colors.transparent)),
+              elevation: 0, backgroundColor: Colors.transparent),),
       home: const SignupScreen(),
     );
   }
